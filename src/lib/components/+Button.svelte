@@ -1,13 +1,9 @@
 <script lang="ts">
-    import type {Snippet} from "svelte";
+    import type { Snippet } from "svelte";
 
-    const {header} = $props<{
-        header: Snippet<[]>
-    }>();
+    const { label }: { label: Snippet<[]> } = $props();
 </script>
 
-<div>
-    {#if header}
-        {@render header()}
-    {/if}
+<div class="bg-color-red">
+    {@render label()}
 </div>

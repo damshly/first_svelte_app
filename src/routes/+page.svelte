@@ -1,11 +1,11 @@
 <script lang="ts">
-    import Header from "$lib/components/+Button.svelte";
+    import Button from "../lib/components/+Button.svelte";
 </script>
+
+{#snippet label()}
+    <h1 on:click={() => alert('clicked')}>Hello</h1>
+{/snippet}
+
 <div>
-    <Header>
-        {#snippet header()}
-            <h1>Hello</h1>
-            <button class="bg-red-500">Click</button>      
-        {/snippet}
-    </Header>
+    <Button {label} />
 </div>
